@@ -1,0 +1,10 @@
+@use 'variables' as v;
+@use 'mixins' as mx;
+
+header {
+    height: 108px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+

@@ -1,0 +1,64 @@
+@use 'variables' as v;
+@use 'mixins' as mx;
+@use 'header' as h;
+@use 'main' as m;
+@use 'placeholders' as p;
+
+.btn-secondary {
+    @extend %group-chat-btn;
+    background: v.$purple-600;
+
+    &:hover {
+        background-color: #B18BDD;
+        transition: all 0.3s ease-in-out;
+    }
+
+    span {
+        color: v.$cyan-300;
+    }
+}
+
+footer {
+    height: 420px;
+    background-color: v.$white;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: calc(420px - 112px);
+        background-color: v.$cyan-600;
+        opacity: 0.9;
+    }
+
+    background-image: url(/assets/images/desktop/image-footer.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+}
+
+.footer-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 32px;
+    padding: 98px 80px;
+    z-index: 1;
+    position: relative;
+
+    h3 {
+        @include mx.text-preset-2 ();
+        color: v.$white;
+        font-weight: 900;
+        line-height: 100%
+    }
+
+    p {
+        @include mx.text-preset-4 ();
+        color: v.$white;
+    }
+    
+}
