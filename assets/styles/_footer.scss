@@ -4,6 +4,7 @@
 @use 'main' as m;
 @use 'placeholders' as p;
 
+
 .btn-secondary {
     @extend %group-chat-btn;
     background: v.$purple-600;
@@ -49,7 +50,6 @@ footer {
         opacity: 0.9;
         z-index: 2;
     }
-
 }
 
 .footer-text {

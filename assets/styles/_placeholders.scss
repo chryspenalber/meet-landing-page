@@ -2,7 +2,7 @@
 @use 'mixins' as mx;
 
 %group-chat-btn {
-    @include mx.text-preset-5 ();
+    @include mx.text-preset-5();
     color: v.$white;
     padding: 16px 40px;
     border: none;

@@ -2,7 +2,6 @@
 @use 'mixins' as mx;
 @use 'placeholders' as p;
 
-
 main {
     display: flex;
     flex-direction: column;
@@ -17,7 +16,8 @@ main {
     margin: 4rem 0;
 }
 
-.group-chat-img-left {
+.group-chat-img-left,
+.group-chat-img-right {
     width: 380px;
     height: 303px;
     overflow: hidden;
@@ -26,29 +26,35 @@ main {
     img {
         width: clamp(300px, 100%, 394px);
         position: absolute;
-        left: -30px;
     }
+}
+
+.group-chat-img-left img {
+    left: -30px;
+}
+
+.group-chat-img-right img {
+    left: 30px;
 }
 
 .group-chat {
     width: clamp(300px, 50%, 450px);
 
     h1 {
-        @include mx.text-preset-1 ();
+        @include mx.text-preset-1();
         color: v.$slate-900;
         text-align: center;
     }
 
     p {
-        @include mx.text-preset-4 ();
+        @include mx.text-preset-4();
         color: v.$slate-600;
         text-align: center;
         margin: 2rem 0;
         padding: 0 1rem;
-    }  
+    }
 
     .group-chat-btn {
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -57,7 +63,6 @@ main {
         .btn-primary {
             @extend %group-chat-btn;
             background: v.$cyan-600;
-
 
             span {
                 color: v.$cyan-300;
@@ -79,21 +84,6 @@ main {
             }
         }
     }
-
-
-}
-
-.group-chat-img-right {
-    width: 380px;
-    height: 303px;
-    overflow: hidden;
-    position: relative;
-
-    img {
-        width: clamp(300px, 100%, 394px);
-        position: absolute;
-        left: 30px;
-    }
 }
 
 .features-container {
@@ -112,31 +102,31 @@ main {
     align-items: center;
     z-index: 3;
     position: relative;
-}
 
-.page-separator-line {
-    width: 2px;
-    height: 80px;
-    background: v.$slate-300;
-}
+    &-line {
+        width: 2px;
+        height: 80px;
+        background: v.$slate-300;
+    }
 
-.page-separator-circle {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid v.$slate-300;
-    padding: 1em;
-    background: v.$white;
-}
+    &-circle {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid v.$slate-300;
+        padding: 1em;
+        background: v.$white;
+    }
 
-.page-separator-number {
-    @include mx.text-preset-5 ();
-    color: v.$slate-600;
-    font-weight: 600;
-    text-align: center;
+    &-number {
+        @include mx.text-preset-5();
+        color: v.$slate-600;
+        font-weight: 600;
+        text-align: center;
+    }
 }
 
 .features-img {
@@ -162,24 +152,24 @@ main {
     gap: 20px;
 
     span {
-        @include mx.text-preset-3 ();
+        @include mx.text-preset-3();
         color: v.$cyan-600;
         font-weight: 900;
         text-align: center;
-        text-transform: uppercase
+        text-transform: uppercase;
     }
 
     h2 {
-        @include mx.text-preset-2 ();
+        @include mx.text-preset-2();
         color: v.$slate-900;
         text-align: center;
         font-weight: 900;
     }
 
     p {
-        @include mx.text-preset-4 ();
+        @include mx.text-preset-4();
         color: v.$slate-600;
         text-align: center;
         padding: 0 1rem;
-    }  
+    }
 }
