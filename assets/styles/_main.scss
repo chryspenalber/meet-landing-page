@@ -7,6 +7,8 @@ main {
     flex-direction: column;
 }
 
+// First section
+
 .group-chat-section {
     display: flex;
     flex-direction: row;
@@ -18,13 +20,13 @@ main {
 
 .group-chat-img-left,
 .group-chat-img-right {
-    width: 380px;
+    width: clamp(300px, 100%, 380px);
     height: 303px;
     overflow: hidden;
     position: relative;
 
     img {
-        width: clamp(300px, 100%, 394px);
+        width: clamp(300px, 100%, 380px);
         position: absolute;
     }
 }
@@ -55,10 +57,17 @@ main {
     }
 
     .group-chat-btn {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 10px;
+
+        @media screen and (max-width: 375px) {
+            flex-direction: column;
+            gap: 10px;
+            
+        }
 
         .btn-primary {
             @extend %group-chat-btn;
@@ -85,6 +94,37 @@ main {
         }
     }
 }
+ 
+  @media (max-width: 768px) {
+    .group-chat-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "left right"
+        "chat chat";
+      justify-items: center;
+      gap: 1.5rem;
+    }
+  
+    .group-chat-img-left {
+      grid-area: left;
+      max-width: 100%;
+    }
+  
+    .group-chat-img-right {
+      grid-area: right;
+      max-width: 100%;
+    }
+  
+    .group-chat {
+      grid-area: chat;
+      margin-top: 1rem;
+    }
+  }
+  
+  
+
+// Second section
 
 .features-container {
     max-width: 80%;
@@ -94,6 +134,11 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 768px) {
+        max-width: 90%;
+        
+    }
 }
 
 .page-separator {
@@ -129,20 +174,69 @@ main {
     }
 }
 
-.features-img {
+/*.features-img {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
     margin: 4em 0;
-
     img {
-        width: 256px;
+        max-width: 256px;
         border-radius: 10px;
     }
 }
+*/
 
+.features-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+    margin: 4em 0;
+    
+    img {
+      width: 100%;
+      max-width: 256px;
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .features-img {
+      gap: 1.5vw;
+  
+      img {
+        max-width: 200px;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .features-img {
+      gap: 1vw;
+  
+      img {
+        max-width: 150px;
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .features-img {
+      justify-content: center;
+      gap: 10px;
+  
+      img {
+        max-width: 100px;
+      }
+    }
+  }
+
+  
 .features-text {
     max-width: 50%;
     display: flex;
@@ -171,5 +265,10 @@ main {
         color: v.$slate-600;
         text-align: center;
         padding: 0 1rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 75%;
+        
     }
 }

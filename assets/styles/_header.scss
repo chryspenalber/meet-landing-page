@@ -2,6 +2,7 @@
 @use 'mixins' as mx;
 
 header {
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: flex-end;
