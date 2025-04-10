@@ -182,19 +182,6 @@ main {
   text-align: center;
 }
 
-/*.features-img {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    margin: 4em 0;
-    img {
-        max-width: 256px;
-        border-radius: 10px;
-    }
-}
-*/
 .features-img {
   display: flex;
   flex-direction: row;
