@@ -23,13 +23,12 @@ main {
 .group-chat-img-left,
 .group-chat-img-right {
     width: clamp(300px, 100%, 380px);
-    height: 303px;
+    height: 100%;
     overflow: hidden;
     position: relative;
 
     img {
-        width: clamp(250px, 100%, 380px);
-        position: absolute;
+        width: clamp(80px, 100%, 380px);
     }
 }
 
@@ -128,7 +127,7 @@ main {
 
 .features-container {
     max-width: 80%;
-    margin: 4.5rem auto;
+    margin: 2.5rem auto;
     text-align: center;
     display: flex;
     flex-direction: column;
