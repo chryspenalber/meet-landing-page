@@ -4,21 +4,20 @@ This is a solution to the [Meet Landing Page Challenge on Frontend Mentor](https
 
 ## 📸 Preview
 
-![Meet Landing Page Screenshot](./assets/images/screenshot.png)
+![Meet Landing Page Screenshot](./assets/images/screenshot-meet-landing-page.png)
 
 ## 🔗 Links
 
-- [Live Site](https://yourusername.github.io/meet-landing-page/)  
-- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/meet-landing-page-XXXXXX)  
-- [Repository](https://github.com/yourusername/meet-landing-page)
+- [Live Site](https://chryspenalber.github.io/meet-landing-page/)  
+- [Repository](https://github.com/chryspenalber/meet-landing-page)
 
 ## 📐 Overview
 
 This landing page includes:
 
-- Hero section with floating images and action buttons.
+- Introduction section with floating images and action buttons.
 - Features section with grid-aligned image previews and descriptions.
-- Custom page separators and stylized footer with background imagery.
+- Custom page separators and stylized footer with background image.
 
 Fully responsive and styled with **SCSS**, the layout adapts elegantly from desktop to mobile screens.
 
@@ -50,10 +49,8 @@ The layout is fully responsive and adapts from large desktops to small mobile sc
 Through this project, I practiced:
 
 - Advanced use of **CSS Grid** and **Flexbox** together
-- How to use `clamp()` for responsive font and element sizing
 - Structuring a page using semantic HTML and modular SCSS
 - Creating **layered backgrounds** with `::before` and `::after` in the footer
-- Styling buttons with hover transitions and color contrasts for accessibility
 
 ---
 
@@ -63,7 +60,6 @@ Some future ideas or improvements:
 
 - Add animations on scroll using JavaScript or CSS
 - Convert the project into a React component-based version
-- Improve accessibility (ARIA labels, keyboard navigation)
 - Add a dark mode toggle 🌙
 
 ---
