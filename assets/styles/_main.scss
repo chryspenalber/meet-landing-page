@@ -28,12 +28,22 @@ main {
     position: relative;
 
     img {
-        width: clamp(80px, 100%, 380px);
+        width: clamp(200px, 100%, 380px);
     }
 }
 
+.group-chat-img-left {
+    align-self: flex-start;
+}
+
+.group-chat-img-right {
+  align-self: flex-end;
+}
+
+
 .group-chat-img-left img {
     left: -30px;
+    
 }
 
 .group-chat-img-right img {
@@ -119,6 +129,14 @@ main {
       grid-area: chat;
       margin-top: 1rem;
     }
+
+    .group-chat-img-left,
+.group-chat-img-right {
+    
+    img {
+        width: clamp(80px, 100%, 380px);
+    }
+}
   }
   
   

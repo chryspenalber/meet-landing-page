@@ -56,11 +56,11 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr auto;
     gap: 32px;
-    padding: 98px 80px;
-    max-width: clamp(320px, 90%, 1200px);
+    padding: 0 80px;
     margin: 0 auto;
     z-index: 3;
     position: relative;
+    top: calc(50% - 112px);
 
     h3 {
         @include mx.text-preset-2();
@@ -80,6 +80,7 @@ footer {
         align-items: center;
         text-align: center;
         gap: 16px;
-        padding: 48px 20px;
+        padding: 0 20px;
+        top: calc(50% - 172px);
     }
 }
