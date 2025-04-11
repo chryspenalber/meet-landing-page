@@ -54,10 +54,12 @@ main {
 }
 
 .group-chat-img-left img {
+  position: relative;
   left: -30px;
 }
 
 .group-chat-img-right img {
+  position: relative;
   left: 30px;
 }
 
@@ -273,7 +275,7 @@ main {
   transition: all 0.3s ease-in-out;
 }
 .btn-secondary span {
-  color: #8FE3F9;
+  color: #D9B8FF;
 }
 
 footer {

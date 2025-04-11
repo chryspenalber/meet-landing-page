@@ -39,10 +39,12 @@ main {
 }
 
 .group-chat-img-left img {
+  position: relative;
   left: -30px;
 }
 
 .group-chat-img-right img {
+  position: relative;
   left: 30px;
 }
 
